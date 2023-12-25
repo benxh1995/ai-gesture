@@ -1,28 +1,30 @@
-import React from 'react';
+import { ThemeProvider } from "@/components/theme-provider"
 
-import { Inter as FontSans } from "next/font/google"
-import { Playfair_Display as FontSerif } from 'next/font/google';
+import { Inter } from "next/font/google"
 
-import { cn } from '@/lib/utils';
 import Header from './Header';
 import Footer from './Footer';
- 
-export const fontSans = FontSans({
-  subsets: ["latin"],
-  variable: "--font-sans",
+
+const fontSans = Inter({
+    subsets: ["latin"],
 })
 
-export const fontSerif = FontSerif({
-  subsets: ["latin"],
-  variable: "--font-serif",
-})
 
 const Layout = ({ children }) => (
-    <body className={cn( "min-h-screen bg-background font-sans antialiased flex flex-col", fontSans.variable, fontSerif.variable)}>
-        <Header />
-        <main className="flex-grow">{children}</main>
-        <Footer />
-    </body>
+    // <ThemeProvider
+    //     attribute="class"
+    //     defaultTheme="system"
+    //     enableSystem
+    //     disableTransitionOnChange
+    // >
+        <body className={`min-h-screen dark bg-background antialiased flex flex-col ${fontSans.className}`}>
+
+            <Header />
+            <main className={`flex-grow`}>{children}</main>
+            <Footer />
+        </body>
+    // </ThemeProvider>
+
 );
 
 export default Layout;

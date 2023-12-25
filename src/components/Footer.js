@@ -3,7 +3,7 @@ const Footer = () => (
     <div>
     🤌
     </div>
-    <div className="text-xs">
+    <div className="text-xs font-sans">
       This project is an open-source benchmarking tool for Large Language Models.
     </div>
   </header>
