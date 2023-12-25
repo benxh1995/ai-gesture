@@ -21,6 +21,7 @@ import {
     TableHeader,
     TableRow,
 } from "@/components/ui/table"
+import Link from "next/link";
 
 const data = [
     {
@@ -90,9 +91,11 @@ function IndexPage() {
                         </div>
                     </CardContent>
                     <CardFooter>
+                        <Link href="/add-prompt" className="w-full">
                         <Button className="w-full">
                             <Share className="mr-2 h-4 w-4" /> Add a prompt
                         </Button>
+                        </Link>
                     </CardFooter>
                 </Card>
                 <Card>
@@ -134,9 +137,11 @@ function IndexPage() {
 
                     </CardContent>
                     <CardFooter>
+                        <Link href="/ranking" className="w-full">
                         <Button className="w-full">
                             <ClipboardSignatureIcon className="mr-2 h-4 w-4" /> Rank a model
                         </Button>
+                        </Link>
                     </CardFooter>
                 </Card>
                 <Card>
@@ -179,9 +184,11 @@ function IndexPage() {
                         </Table>
                     </CardContent>
                     <CardFooter>
-                        <Button className="w-full">
-                            <SearchCheckIcon className="mr-2 h-4 w-4" /> See All
-                        </Button>
+                        <Link href="/results" className="w-full">
+                            <Button className="w-full">
+                                <SearchCheckIcon className="mr-2 h-4 w-4" /> See All
+                            </Button>
+                        </Link>
                     </CardFooter>
                 </Card>
             </div>
