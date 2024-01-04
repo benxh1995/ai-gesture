@@ -83,7 +83,7 @@ function Results() {
 
     return (
         <div className="container mx-auto mt-4">
-            <Toaster />
+            <Toaster closeButton />
             <div className="flex justify-between items-center">
                 <div className="space-y-1">
                     <h2 className="text-2xl font-semibold tracking-tight">
